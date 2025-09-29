@@ -1,4 +1,4 @@
-package com.inventory.Controller;
+package com.inventory.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,11 +6,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 
 
 @Entity
+
 @Table(name = "products")
+@Data
 public class Product {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,10 +27,10 @@ public class Product {
     @Column(nullable = false)
     private int stockQuantity;
 
-    // Bonus field
+
     private int lowStockThreshold;
 
-    // Constructors
+  
     public Product() {
     }
 
@@ -38,7 +41,7 @@ public class Product {
         this.lowStockThreshold = lowStockThreshold;
     }
 
-    // Getters & Setters
+ 
     public Long getId() {
         return id;
     }

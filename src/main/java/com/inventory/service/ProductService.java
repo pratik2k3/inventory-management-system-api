@@ -2,7 +2,7 @@ package com.inventory.service;
 
 import java.util.List;
 
-import com.inventory.Controller.Product;
+import com.inventory.Entity.Product;
 
 public interface ProductService {
 	Product createProduct(Product product);
