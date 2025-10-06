@@ -15,12 +15,11 @@ public interface ProductService {
 
     void deleteProduct(Long id);
 
-    // Inventory management
+  
     Product increaseStock(Long id, int quantity);
 
     Product decreaseStock(Long id, int quantity);
 
-    // Bonus feature
-    List<Product> getLowStockProducts();
+      List<Product> getLowStockProducts();
 		
 }
